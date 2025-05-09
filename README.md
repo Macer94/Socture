@@ -1,2 +1,0 @@
-# Socture
-Cazzi miei
