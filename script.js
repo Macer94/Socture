@@ -422,6 +422,7 @@ function initializeAccuracyChart() {
 }
 
 /**
+
  * Gestisce gli effetti di scroll
  */
 function handleScroll() {
