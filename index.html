@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Socture - Shape the future, socially</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header principale -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="/workspaces/Socture/img/logo.PNG" alt="Socture" class="logo">
+      </div>
+      
+      <!-- Barra di ricerca (solo desktop) -->
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="Cerca previsioni..." class="search-input">
+        </div>
+      </div>
+      
+      <!-- Icone navigazione (solo desktop) -->
+      <div class="nav-icons">
+        <a href="#" class="nav-icon active" title="Home">
+          <i class="fas fa-home"></i>
+        </a>
+        <a href="#" class="nav-icon" title="Esplora">
+          <i class="fas fa-compass"></i>
+        </a>
+        <a href="#" id="create-btn" class="nav-icon create-icon" title="Crea">
+          <i class="fas fa-crystal-ball"></i>
+        </a>
+        <a href="#" class="nav-icon notification-icon" title="Notifiche">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </a>
+        <a href="#" class="profile-icon" title="Profilo">
+          <img src="/workspaces/Socture/img/10.jpg" alt="Profilo" class="avatar-small">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenitore principale -->
+  <main class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="socture-title">Socture</h1>
+        <p class="socture-tagline">Shape the future, socially</p>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-item active">
+          <i class="fas fa-home sidebar-icon"></i>
+          <span class="sidebar-text">Home</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <i class="fas fa-search sidebar-icon"></i>
+          <span class="sidebar-text">Cerca</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <i class="fas fa-compass sidebar-icon"></i>
+          <span class="sidebar-text">Esplora</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <i class="fas fa-chart-line sidebar-icon"></i>
+          <span class="sidebar-text">Tendenze</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <i class="far fa-comment-dots sidebar-icon"></i>
+          <span class="sidebar-text">Messaggi</span>
+        </a>
+        <a href="#" class="sidebar-item">
+          <i class="far fa-calendar-alt sidebar-icon"></i>
+          <span class="sidebar-text">In scadenza</span>
+        </a>
+        <a href="#" id="sidebar-create-btn" class="sidebar-item create-item">
+          <i class="fas fa-crystal-ball sidebar-icon"></i>
+          <span class="sidebar-text">Crea previsione</span>
+        </a>
+        <a href="#" class="sidebar-item profile-item">
+          <img src="/workspaces/Socture/img/20.jpg" alt="Profile" class="sidebar-avatar">
+          <span class="sidebar-text">Profilo</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link">Informazioni</a>
+        <a href="#" class="sidebar-link">Privacy</a>
+        <a href="#" class="sidebar-link">Termini</a>
+        <p class="copyright">© 2025 SOCTURE</p>
+      </div>
+    </aside>
+    
+    <!-- Area contenuto -->
+    <div class="content-area">
+      <!-- Sezione previsioni in scadenza -->
+      <section class="expiring-predictions">
+        <h2 class="section-title">In scadenza</h2>
+        <div class="prediction-scroll">
+          <!-- Nuova previsione -->
+          <div class="prediction-item new-prediction">
+            <div class="prediction-diamond">
+              <div class="prediction-symbol">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <span class="prediction-label">Nuova</span>
+          </div>
+          
+          <!-- Previsione 1 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 1')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/10.jpg" alt="Previsione 1" class="prediction-image">
+            </div>
+            <span class="prediction-label">1h rimaste</span>
+          </div>
+          
+          <!-- Previsione 2 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 2')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/20.jpg" alt="Previsione 2" class="prediction-image">
+            </div>
+            <span class="prediction-label">3h rimaste</span>
+          </div>
+          
+          <!-- Previsione 3 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 3')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/30.jpg" alt="Previsione 3" class="prediction-image">
+            </div>
+            <span class="prediction-label">5h rimaste</span>
+          </div>
+          
+          <!-- Previsione 4 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 4')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/40.jpg" alt="Previsione 4" class="prediction-image">
+            </div>
+            <span class="prediction-label">8h rimaste</span>
+          </div>
+          
+          <!-- Previsione 5 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 5')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/50.jpg" alt="Previsione 5" class="prediction-image">
+            </div>
+            <span class="prediction-label">12h rimaste</span>
+          </div>
+          
+          <!-- Previsione 6 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 6')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/60.jpg" alt="Previsione 6" class="prediction-image">
+            </div>
+            <span class="prediction-label">1g rimasta</span>
+          </div>
+          
+          <!-- Previsione 7 -->
+          <div class="prediction-item" onclick="openStoryModal('Storia 7')">
+            <div class="prediction-diamond">
+              <img src="/workspaces/Socture/img/70.jpg" alt="Previsione 7" class="prediction-image">
+            </div>
+            <span class="prediction-label">2g rimaste</span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Filtri categorie -->
+      <section class="categories-filter">
+        <button class="category-btn active">Tutti</button>
+        <button class="category-btn">Sport</button>
+        <button class="category-btn">Politica</button>
+        <button class="category-btn">Tecnologia</button>
+        <button class="category-btn">Finanza</button>
+        <button class="category-btn">Intrattenimento</button>
+        <button class="category-btn">Ambiente</button>
+        <button class="category-btn">Scienza</button>
+      </section>
+      
+      <!-- Feed principale -->
+      <section class="feed">
+        <!-- Post 1 -->
+        <article class="prediction-card">
+          <header class="card-header">
+            <img src="/workspaces/Socture/img/30.jpg" alt="Profile" class="user-avatar">
+            <div class="user-info">
+              <h3 class="username">sportsfan</h3>
+              <span class="post-meta">Scade tra 3 giorni • Sport</span>
+            </div>
+            <button class="options-btn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </header>
+          
+          <div class="card-content">
+            <p class="prediction-text">L'Italia vincerà i prossimi Europei di calcio battendo la Francia in finale con il punteggio di 2-1!</p>
+            <div class="media-container">
+              <img src="/workspaces/Socture/img/40.jpg" alt="Prediction content" class="prediction-media">
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <div class="social-actions">
+              <button class="action-btn"><i class="far fa-heart"></i></button>
+              <button class="action-btn"><i class="far fa-comment"></i></button>
+              <button class="action-btn"><i class="far fa-paper-plane"></i></button>
+              <button class="action-btn bookmark"><i class="far fa-bookmark"></i></button>
+            </div>
+            
+            <div class="engagement">
+              <span class="likes-count">128 Mi piace</span>
+              <a href="#" class="view-comments">Vedi tutti e 42 i commenti</a>
+            </div>
+            
+            <div class="vote-meter">
+              <div class="vote-bar">
+                <div class="vote-progress" style="width: 65%"></div>
+              </div>
+              <div class="vote-stats">
+                <span class="vote-yes">65% Si avvererà</span>
+                <span class="vote-no">35% Non si avvererà</span>
+              </div>
+              <div class="vote-buttons">
+                <button class="vote-yes-btn"><i class="fas fa-check"></i> Si avvererà</button>
+                <button class="vote-no-btn"><i class="fas fa-times"></i> Non si avvererà</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Post 2 -->
+        <article class="prediction-card">
+          <header class="card-header">
+            <img src="/workspaces/Socture/img/50.jpg" alt="Profile" class="user-avatar">
+            <div class="user-info">
+              <h3 class="username">techoracle</h3>
+              <span class="post-meta">Scade tra 1 mese • Tecnologia</span>
+            </div>
+            <button class="options-btn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </header>
+          
+          <div class="card-content">
+            <p class="prediction-text">Entro fine 2025, Apple lancerà un visore AR/VR che supererà in vendite tutti i competitors nel primo trimestre. Il prezzo sarà sotto i 1000€ per la versione base.</p>
+          </div>
+          
+          <div class="card-footer">
+            <div class="social-actions">
+              <button class="action-btn"><i class="far fa-heart"></i></button>
+              <button class="action-btn"><i class="far fa-comment"></i></button>
+              <button class="action-btn"><i class="far fa-paper-plane"></i></button>
+              <button class="action-btn bookmark"><i class="far fa-bookmark"></i></button>
+            </div>
+            
+            <div class="engagement">
+              <span class="likes-count">93 Mi piace</span>
+              <a href="#" class="view-comments">Vedi tutti e 56 i commenti</a>
+            </div>
+            
+            <div class="vote-meter">
+              <div class="vote-bar">
+                <div class="vote-progress" style="width: 32%"></div>
+              </div>
+              <div class="vote-stats">
+                <span class="vote-yes">32% Si avvererà</span>
+                <span class="vote-no">68% Non si avvererà</span>
+              </div>
+              <div class="vote-buttons">
+                <button class="vote-yes-btn"><i class="fas fa-check"></i> Si avvererà</button>
+                <button class="vote-no-btn"><i class="fas fa-times"></i> Non si avvererà</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Post 3 -->
+        <article class="prediction-card">
+          <header class="card-header">
+            <img src="/workspaces/Socture/img/60.jpg" alt="Profile" class="user-avatar">
+            <div class="user-info">
+              <h3 class="username">financeguru</h3>
+              <span class="post-meta">Scade tra 6 mesi • Finanza</span>
+            </div>
+            <button class="options-btn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </header>
+          
+          <div class="card-content">
+            <p class="prediction-text">Bitcoin raggiungerà i 100.000€ entro dicembre 2025. Ecco il grafico che mostra la mia previsione basata sui cicli passati.</p>
+            <div class="media-container">
+              <img src="/workspaces/Socture/img/70.jpg" alt="Grafico Bitcoin" class="prediction-media">
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <div class="social-actions">
+              <button class="action-btn"><i class="far fa-heart"></i></button>
+              <button class="action-btn"><i class="far fa-comment"></i></button>
+              <button class="action-btn"><i class="far fa-paper-plane"></i></button>
+              <button class="action-btn bookmark"><i class="far fa-bookmark"></i></button>
+            </div>
+            
+            <div class="engagement">
+              <span class="likes-count">245 Mi piace</span>
+              <a href="#" class="view-comments">Vedi tutti e 119 i commenti</a>
+            </div>
+            
+            <div class="vote-meter">
+              <div class="vote-bar">
+                <div class="vote-progress" style="width: 78%"></div>
+              </div>
+              <div class="vote-stats">
+                <span class="vote-yes">78% Si avvererà</span>
+                <span class="vote-no">22% Non si avvererà</span>
+              </div>
+              <div class="vote-buttons">
+                <button class="vote-yes-btn"><i class="fas fa-check"></i> Si avvererà</button>
+                <button class="vote-no-btn"><i class="fas fa-times"></i> Non si avvererà</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      
+      <!-- Tendenze -->
+      <section class="trends-section">
+        <h2 class="section-title">Tendenze attuali</h2>
+        <div class="trends-grid">
+          <div class="trend-card">
+            <div class="trend-icon">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <h3 class="trend-title">AI Generativa</h3>
+            <p class="trend-count">+235 previsioni</p>
+          </div>
+          
+          <div class="trend-card">
+            <div class="trend-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="trend-title">Clima 2026</h3>
+            <p class="trend-count">+193 previsioni</p>
+          </div>
+          
+          <div class="trend-card">
+            <div class="trend-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="trend-title">Spazio</h3>
+            <p class="trend-count">+142 previsioni</p>
+          </div>
+          
+          <div class="trend-card">
+            <div class="trend-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3 class="trend-title">Medicina</h3>
+            <p class="trend-count">+118 previsioni</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!-- Sidebar destra (solo desktop) -->
+    <aside class="recommendations">
+      <!-- Profilo utente -->
+      <div class="user-profile">
+        <img src="/workspaces/Socture/img/10.jpg" alt="Profile" class="profile-avatar">
+        <div class="profile-info">
+          <h3 class="profile-username">username</h3>
+          <p class="profile-name">Nome Utente</p>
+        </div>
+        <button class="profile-switch">Cambia</button>
+      </div>
+      
+      <!-- Accuratezza previsioni -->
+      <div class="accuracy-card">
+        <h3 class="accuracy-title">La tua accuratezza</h3>
+        <div class="accuracy-meter">
+          <div class="accuracy-chart" data-percentage="73">
+            <svg width="80" height="80" viewBox="0 0 80 80">
+              <circle class="accuracy-circle-bg" cx="40" cy="40" r="36"></circle>
+              <circle class="accuracy-circle" cx="40" cy="40" r="36" stroke-dasharray="226.2" stroke-dashoffset="61.1"></circle>
+            </svg>
+            <div class="accuracy-percentage">73%</div>
+          </div>
+          <div class="accuracy-stats">
+            <div class="accuracy-correct">
+              <span class="stat-number">24</span>
+              <span class="stat-label">Corrette</span>
+            </div>
+            <div class="accuracy-incorrect">
+              <span class="stat-number">9</span>
+              <span class="stat-label">Errate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Suggerimenti -->
+      <div class="suggestions">
+        <div class="suggestions-header">
+          <h3 class="suggestions-title">Suggeriti per te</h3>
+          <a href="#" class="see-all">Vedi tutti</a>
+        </div>
+        
+        <!-- Suggerimento 1 -->
+        <div class="suggestion-item">
+          <img src="/workspaces/Socture/img/20.jpg" alt="User" class="suggestion-avatar">
+          <div class="suggestion-info">
+            <h4 class="suggestion-username">user1</h4>
+            <p class="suggestion-meta">Seguito da user2 + altri 5</p>
+          </div>
+          <button class="follow-btn">Segui</button>
+        </div>
+        
+        <!-- Suggerimento 2 -->
+        <div class="suggestion-item">
+          <img src="/workspaces/Socture/img/30.jpg" alt="User" class="suggestion-avatar">
+          <div class="suggestion-info">
+            <h4 class="suggestion-username">user2</h4>
+            <p class="suggestion-meta">Suggerito per te</p>
+          </div>
+          <button class="follow-btn">Segui</button>
+        </div>
+        
+        <!-- Suggerimento 3 -->
+        <div class="suggestion-item">
+          <img src="/workspaces/Socture/img/40.jpg" alt="User" class="suggestion-avatar">
+          <div class="suggestion-info">
+            <h4 class="suggestion-username">user3</h4>
+            <p class="suggestion-meta">Nuovo su Socture</p>
+          </div>
+          <button class="follow-btn">Segui</button>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="footer-links">
+        <a href="#" class="footer-link">Informazioni</a>
+        <a href="#" class="footer-link">Aiuto</a>
+        <a href="#" class="footer-link">Stampa</a>
+        <a href="#" class="footer-link">API</a>
+        <a href="#" class="footer-link">Privacy</a>
+        <a href="#" class="footer-link">Termini</a>
+        <p class="copyright">© 2025 SOCTURE</p>
+      </div>
+    </aside>
+  </main>
+  
+  <!-- Navbar mobile -->
+  <nav class="mobile-nav">
+    <a href="#" class="mobile-nav-item active">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#" class="mobile-nav-item">
+      <i class="fas fa-search"></i>
+      <span>Cerca</span>
+    </a>
+    <a href="#" id="mobile-create-btn" class="mobile-nav-item">
+      <i class="fas fa-crystal-ball"></i>
+      <span>Crea</span>
+    </a>
+    <a href="#" class="mobile-nav-item">
+      <i class="fas fa-chart-line"></i>
+      <span>Tendenze</span>
+    </a>
+    <a href="#" class="mobile-nav-item">
+      <img src="/workspaces/Socture/img/10.jpg" alt="Profile" class="mobile-avatar">
+      <span>Profilo</span>
+    </a>
+  </nav>
+  
+  <!-- Modal previsione -->
+  <div id="story-modal" class="prediction-modal">
+    <div class="modal-content">
+      <header class="modal-header">
+        <img src="/workspaces/Socture/img/30.jpg" alt="User" id="modal-avatar" class="modal-user-avatar">
+        <div class="modal-user-info">
+          <h3 id="modal-username" class="modal-username">Username</h3>
+          <span id="modal-time" class="modal-time">4h rimaste</span>
+        </div>
+        <button id="modal-close" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+      
+      <div class="modal-body">
+        <div class="modal-image-container">
+          <img src="/workspaces/Socture/img/40.jpg" id="modal-image" class="modal-image">
+        </div>
+        
+        <div class="modal-content-container">
+          <h2 id="modal-title" class="modal-title">Titolo della previsione</h2>
+          <p id="modal-description" class="modal-description">Descrizione della previsione...</p>
+          
+          <div class="modal-vote-meter">
+            <div class="modal-vote-bar">
+              <div id="modal-progress" class="modal-vote-progress" style="width: 50%"></div>
+            </div>
+            <div class="modal-vote-stats">
+              <span id="modal-yes" class="modal-vote-yes">50% Si avvererà</span>
+              <span id="modal-no" class="modal-vote-no">50% Non si avvererà</span>
+            </div>
+            
+            <div class="modal-vote-buttons">
+              <button class="modal-vote-yes-btn"><i class="fas fa-check"></i> Si avvererà</button>
+              <button class="modal-vote-no-btn"><i class="fas fa-times"></i> Non si avvererà</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal creazione previsione (da implementare) -->
+  
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
