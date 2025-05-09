@@ -3,17 +3,17 @@
  * script.js - Logica interattiva del frontend
  */
 
-// Immagini per il sito - Percorsi dal repository GitHub
+// Immagini per il sito - Percorsi diretti nella radice del repository
 const IMAGES = {
-  logo: '/workspaces/Socture/img/logo.PNG',
+  logo: 'logo.PNG',
   // Immagini usate come avatar e contenuti
-  img10: '/workspaces/Socture/img/10.jpg',
-  img20: '/workspaces/Socture/img/20.jpg',
-  img30: '/workspaces/Socture/img/30.jpg',
-  img40: '/workspaces/Socture/img/40.jpg',
-  img50: '/workspaces/Socture/img/50.jpg',
-  img60: '/workspaces/Socture/img/60.jpg',
-  img70: '/workspaces/Socture/img/70.jpg'
+  img10: '10.jpg',
+  img20: '20.jpg',
+  img30: '30.jpg',
+  img40: '40.jpg',
+  img50: '50.jpg',
+  img60: '60.jpg',
+  img70: '70.jpg'
 };
 
 // Dati per le storie/previsioni
@@ -152,41 +152,6 @@ function initApp() {
   
   // Gestisci gli eventi di scroll per effetti parallax
   window.addEventListener('scroll', handleScroll);
-  
-  // Aggiorna le immagini sulle pagine
-  updateImagesOnPage();
-}
-
-/**
- * Aggiorna tutte le immagini sulla pagina con i percorsi corretti
- */
-function updateImagesOnPage() {
-  // Aggiorna il logo
-  const logoElements = document.querySelectorAll('.logo');
-  logoElements.forEach(el => {
-    el.src = IMAGES.logo;
-  });
-  
-  // Aggiorna le immagini degli avatar usando una rotazione per varietà
-  const avatarElements = document.querySelectorAll('.user-avatar, .avatar-small, .profile-avatar, .suggestion-avatar, .mobile-avatar, .sidebar-avatar');
-  avatarElements.forEach((el, index) => {
-    const imageKeys = [IMAGES.img10, IMAGES.img20, IMAGES.img30, IMAGES.img40, IMAGES.img50, IMAGES.img60, IMAGES.img70];
-    el.src = imageKeys[index % imageKeys.length];
-  });
-  
-  // Aggiorna le immagini delle previsioni con le immagini fornite
-  const predictionImages = document.querySelectorAll('.prediction-image');
-  predictionImages.forEach((el, index) => {
-    const imageKeys = [IMAGES.img20, IMAGES.img30, IMAGES.img40, IMAGES.img50, IMAGES.img60, IMAGES.img70, IMAGES.img10];
-    el.src = imageKeys[index % imageKeys.length];
-  });
-  
-  // Aggiorna le immagini dei post
-  const postImages = document.querySelectorAll('.prediction-media');
-  postImages.forEach((el, index) => {
-    const imageKeys = [IMAGES.img30, IMAGES.img40, IMAGES.img50, IMAGES.img60, IMAGES.img70, IMAGES.img10, IMAGES.img20];
-    el.src = imageKeys[index % imageKeys.length];
-  });
 }
 
 /**
@@ -422,7 +387,6 @@ function initializeAccuracyChart() {
 }
 
 /**
-
  * Gestisce gli effetti di scroll
  */
 function handleScroll() {
